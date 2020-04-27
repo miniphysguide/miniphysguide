@@ -1,0 +1,880 @@
+﻿<!-- 
+PAGE INCOMPLETE (pink); 
+PAGE COMPLETE BUT LINKS ARE NOT (#ffc054); 
+ALL COMPLETE (#d7e4f5) 
+
+NOTE:
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Here's a note.
+</p>
+<hr>
+</div>
+
+WARNING:
+
+<div class="warning">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Warning:  </b> 
+Here's a warning.
+</p>
+<hr>
+</div>
+
+&Therefore;
+&nbsp; &thinsp; &hairsp;
+
+ &plusmn; <sup>1</sup>&frasl;<sub>30</sub>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+h1
+{
+  background-color:#ECF3F3;
+  padding:5px 30px 5px 30px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  font-size:80%;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:480px
+}
+
+div.note {
+  font-size:80%;
+  color:green;
+  margin-left:105px;
+}
+
+div.warning {
+  font-size:80%;
+  color:red;
+  margin-left:105px;
+}
+
+.eg{
+  font-size:97%;
+  color:#4f4f4f;  
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 4px;
+  font-size:94%;
+}
+
+th{
+  background-color: #eec9ff;
+}
+
+td{
+  background-color: #f9edff;
+}
+
+</style>
+</head>
+
+<body 
+  style="
+    background-color:pink; 
+    font-family:arial;
+    width:480px;
+    margin: auto;">
+
+
+<head>
+<style>
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  margin: 10px;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ffc45e; 
+  color: #6e34ba;
+}
+</style>
+</head>
+
+
+
+
+<button 
+  class="button"
+  onclick="showImage()">
+Specification Reference
+</button>
+
+<div id="specImage" style="display:none">
+
+<img 
+  src="3.1.2 Limitation of physical measurements spec point.jpg" 
+  alt="3.1.2 Limitation of physical measurements spec point"
+  display="block"/>
+
+</div>
+
+<script>
+function showImage() {
+  var x = document.getElementById("specImage");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+<h2>
+LIMITATION OF PHYSICAL MEASUREMENTS
+</h2>
+<br>
+
+<p>
+This page introduces random and systematic errors and gives definitions for the common terms
+ precision, accuracy, repeatability, reproducibility, resolution, reading, and
+measurement. It will also go over absolute, fractional, and percentage uncertainties and how to calculate with them, as well as how 
+uncertainty is displayed and calculated in graphs.
+
+</p>
+<br>
+<h3>
+A few key terms explained
+</h3>
+
+<h4>
+Precision vs accuracy
+</h4>
+
+<p>
+These two terms are often confused for each other, although their difference should be quite clear with the help of visuals.
+
+<br><br>
+<b>Precision</b> can only be used to describe a set of <i>multiple readings</i> because
+ it compares <i>how close together</i> your results are and has nothing to do the actual value or other people's experiments.
+ <br><br>The more precise your results, the less they differ from each other.
+<br><br>
+
+<b>Accuracy</b> is used to describe how close the mean of your results/your measurement is to the <i>true value</i>.
+<br><br>The more accurate your results, the closer they are to the actual true value.
+<br><br> Low precision describes a problem of dispersion (variation) whereas low accuracy describes a problem of mean (centering).
+
+<br><br>
+I think this target representation is a really neat way of visualising this:
+<br>
+</p>
+
+  <img 
+    style="width:480px"
+    src="targets.png" 
+    alt="Illustration of accuracy vs. precision using a shooting target."
+    display="block"/>
+
+
+
+<p 
+  style="text-align: center;
+         color: grey;
+         font-size: 80%;
+         margin:4px 0px 10px 0px;">
+With this, we imagine the centre of the target being the true value of what we're measuring (what the measurement should be if it was 100% accurate), and the dots being our individual measurements.
+
+</p>
+
+<p>
+In terms of actual measurements, here's an example of the same 4 situations when trying to measure the mass of a 100g mass:
+
+<table
+  style="
+    width:237px;
+    float:left;">
+  <tr>
+    <th colspan="5">Mass balance reading (g)</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Mean</th>
+  </tr>
+
+  <tr>
+    <td>100.0</td>
+    <td>100.1</td>
+    <td>100.0</td>
+    <td>99.9</td>
+    <td><i>100.0</i></td>
+  </tr>
+</table>
+ 
+
+<table
+  style="
+    width:237px;
+    float:right;">
+  <tr>
+    <th colspan="5">Mass balance reading (g)</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Mean</th>
+  </tr>
+
+  <tr>
+    <td>47.3</td>
+    <td>47.4</td>
+    <td>47.5</td>
+    <td>47.4</td>
+    <td><i>47.4</i></td>
+  </tr>
+</table>
+
+
+
+
+<br><br><br><br>
+
+<p 
+  style="text-align: center;
+         color: #615353;
+         font-size: 100%;
+         width:237px;
+         float:left;
+         margin:6px 0px 18px 0px;">
+<b>Accurate, Precise</b>
+</p>
+
+<p 
+  style="text-align: center;
+         color: #615353;
+         font-size: 100%;
+         width:237px;
+         float:right;
+         margin:6px 0px 18px 0px;">
+<b>Not Accurate, Precise</b>
+</p>
+
+
+
+
+
+
+
+
+
+<table
+  style="
+    width:237px;
+    float:left;">
+  <tr>
+    <th colspan="5">Mass balance reading (g)</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Mean</th>
+  </tr>
+
+  <tr>
+    <td>101.8</td>
+    <td>115.3</td>
+    <td>93.2</td>
+    <td>91.3</td>
+    <td><i>100.0</i></td>
+  </tr>
+</table>
+ 
+
+<table
+  style="
+    width:237px;
+    float:right;">
+  <tr>
+    <th colspan="5">Mass balance reading (g)</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Mean</th>
+  </tr>
+
+  <tr>
+    <td>163.9</td>
+    <td>177.4</td>
+    <td>148.9</td>
+    <td>217.7</td>
+    <td><i>177.0</i></td>
+  </tr>
+</table>
+
+
+
+
+<br><br><br><br><br>
+
+<p 
+  style="text-align: center;
+         color: #615353;
+         font-size: 100%;
+         width:237px;
+         float:left;
+         margin:6px 0px 10px 0px;">
+<b>Accurate, Not Precise</b>
+</p>
+
+<p 
+  style="text-align: center;
+         color: #615353;
+         font-size: 100%;
+         width:237px;
+         float:right;
+         margin:6px 0px 10px 0px;">
+<b>Not Accurate, Not Precise</b>
+</p>
+</p>
+
+<br><br><br>
+<br>
+
+
+<p> I also quite like this representation using a distribution graph (the graphs with the blue line):
+ <img 
+    style="width:480px"
+    src="distribution.png" 
+    alt="Illustration of accuracy vs. precision using a distribution graph."
+    display="block"/>
+</p>
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+If you're unfamilliar with distribution graphs, the x-axis represents number values of what a reading is- in this case, the true value of what is being measured is represented by the
+the dotted line so the x-value at the dotted line is the true value. The y-axis is represents how many results there are that are a given x-value (or the proportion of total results with that value).
+ This means that in these graphs, the peaks represent the mean of the results (as well as the mode) because the peak is at the centre of each distribution. where the peak is not equal to the true value is where there is inaccuracy. 
+The width of the distribution shows how spread out the results are from each other, so the wider the graph, the less precise the results are since they are less consistent (more varied).
+</p>
+<hr>
+</div>
+
+
+<br>
+<h4>
+Repeatability vs reproducibility
+</h4>
+
+<p>
+These two words are both used to describe how consistent results are if the experiment is done again, so are ways of measuring precision.
+
+<br><br> If results have high repeatability and reproducibility,
+ we tend to view them as more reliable, it demonstrates that these findings are not expected to change over time. 
+
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Often in scientific write ups, 
+repeatability and reproducibility are expressed as standard deviations
+ (a measure of how much results vary).
+</p>
+<hr>
+</div>
+
+<br>
+<b>Repeatability</b> measures the variation of results when the same experiment is done again with the same setup and location, observer, and conditions over a short amount of time. You can view it as measuring the precision of one set of results for an experiment by doing repeats.
+
+<br><br>
+<b>Reproducibility</b> measures the variation of results too, but more the variation between different times the experiment has been replicated by different people at different locations with different instruments and perhaps different methods.
+It measures our ability to replicate the findings of others.
+<br><br>
+I like to view it as repeatability measuring the variation of results for one scientist at their own lab doing their experiment and reproducibility measuring
+ the variation of results for the whole world collectively trying this same experiment in their separate labs.
+
+ <img 
+    style="width:400px"
+    src="rep rep drawing.png" 
+    alt="Drawing of repeatability and reproducibility."
+    display="block"/>
+
+</p>
+
+<h4>
+Resolution
+</h4>
+
+
+<b> Resolution</b> describes the smallest change in quantity being measured that clearly gives a change in reading is for a given instrument.
+<br> <br>
+For example, let's say we had a mass balance and the reading was 0.00g, then we slowly added teeny sprinkles of flour until the reading changed. 
+If the reading changed to 0.01g, then we can say the mass balance has a resolution of 0.01g. On the other hand, if the first reading it changed to was instead 0.05g (so it can only round the quantity to 0.00g, 0.05g, 0.10g, 0.15g etc), 
+it would have a resolution of 0.05g. 
+<br><br>
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+
+This value of resolution in measuring instruments seems to contradict how we'd normally describe instruments with resolution.
+
+<br><br> 
+When comparing the mass balances in the previous example, you'd normally intuitively say that the 0.01g res. mass balance has a higher resolution than the 0.05g res. mass balance because it can be seen as being a 'higher quality' mass balance.
+<br><br>
+
+This is more obviously seen when describing photos- higher quality photos are described as having a higher resolution even though the 
+value of the resolution is expected to be smaller. This comparison makes a lot more sense in pictures when you realise that resolution in images
+ is usually measured in ppm (pixels per metre) rather than an actual length which makes the description completely more logical.
+
+<br><br>
+This is kind of applied to all resolutions: although we sometimes state resolution as just a length, when comparing, it's always in measures per unit (even though we sometimes don't realise we're doing that).
+<br><br>
+From knowing this, it makes perfect sense how the mass balance with the resolution of 0.01g has a higher resolution than the mass balance with a resolution of 0.05g, even though it seems absurd!
+ 
+</p>
+<hr>
+</div>
+
+
+
+
+<h4>
+Reading vs measurement
+</h4>
+
+<p>
+We generally throw these two terms around interchangably but they are different from each other.
+
+<br><br>
+Readings are where one value is taken (e.g. reading a thermometer), whereas measurements are where the difference
+ between two readings is found (e.g. measuring with a ruler- both the start and end point have to be judged).
+
+<br><br>
+Understanding this difference is important for determining uncertainty.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<b>In a nutshell...</b>
+</p>
+
+<table
+  style="
+    width:100%;">
+  <tr>
+    <th>Precision</th>
+    <td>The more precise results are, the less varied/more consistent they are with each other.</td>
+  </tr>
+
+  <tr>
+    <th>Accuracy</th>
+    <td>The more accurate results are, the closer they are to the true value.</td>
+  </tr>
+
+  <tr>
+    <th>Repeatability</th>
+    <td>An experiment is repeatable if the original experimenter gets similar results if they redo the experiment with the same equipment and method. The more similar the results, the more repeatable the experiment.</td>
+  </tr>
+
+  <tr>
+    <th>Reproducibility</th>
+    <td>An experiment is reproducible if similar results can be obtained if the experiment is redone by a different person 
+or with different techniques and equipment. The more similar the results, the more reproducible the experiment.</td>
+  </tr>
+
+  <tr>
+    <th>Resolution</th>
+    <td>Resolution describes the smallest change in quantity you can measure with a given instrument.</td>
+  </tr>
+
+  <tr>
+    <th>Reading</th>
+    <td>Readings are where only one value is taken.</td>
+  </tr>
+
+  <tr>
+    <th>Measurement</th>
+    <td>Measurements are where you are determining the difference between two readings.</td>
+  </tr>
+
+
+</table>
+
+
+
+<br><br><br>
+<br><br><br>
+<h3>
+Random and systematic errors
+</h3>
+
+<h4>
+What are random errors?
+</h4>
+
+<p>
+Errors caused by unpredictable changes/events during an experiment are random errors (not surprisingly). 
+<br><br>
+These errors affect <b>precision</b>, meaning they 
+cause differences in the measurements/readings leading to the results being spread about the mean.
+<br><br>
+You <b>cannot</b> eliminate all random errors.
+<br><br>
+For example, a random error could be electronic noise in an electrical circuit; or perhaps changes in air currents/wind when measuring with a mass balance- they are usually things out of your control.
+<br><br>
+Human error and environmental error are usually kinds of random error.
+
+</p>
+
+
+<h4>
+How to reduce random error
+</h4>
+
+<p>
+There are arguably infinite ways of reducing random errors, here's a few examples:
+
+<ul>
+  <li>Take at least 3 <b> repeats</b> and calculate a <b>mean</b>, identifying and ignoring any anomalies.</li>
+  <br><li>Reduce human error by using <b>computers</b>, <b>data loggers</b>, or<b> cameras</b> for measurements.</li>
+  <br><li>Control <b>environmental factor</b>s as best as you can (do the experiment in a short amount of time to reduce temperature variation, or close the windows to reduce change in air currents etc.)</li>
+</ul>  
+
+</p>
+<br>
+<h4>
+What are systematic errors?
+</h4>
+
+<p>
+Errors that cause a consistent, repeatable difference in measurement due to apparatus or flawed 
+experimental design.
+<br><br>
+Systematic errors affect <b>accuracy</b>, meaning they cause the reading to be off (too high or too low) by the same amount.
+<br><br>
+Since the error is consistent, it's easier to work around systematic errors (for example,
+ if you find that a mass balance wasn't zeroed properly and instead reads 0.25g when nothing's on it, you can just subtract 0.25g from 
+the readings you've taken with the uncalibrated balance).
+<br><br>
+Another example of a systematic error is if you are working with a faulty instrument. This may cause you to have a scale factor error but
+ at A level, generally when talking about systematic errors, it refers to offset errors due to calibration problems.
+<br><br>
+<b>Zero errors</b> are the most common type of systematic error (where an instrument, like a mass balance, is not zeroed properly).
+</p>
+
+<h4>
+Reducing systematic error
+</h4>
+<p>
+It's more difficult to detect systematic errors but there are ways to reduce them beforehand:
+
+
+<ul>
+  <li><b>Calibrate</b> the apparatus and check it by measuring a known value to easily identify a systematic error (e.g. weigh a 1 kg mass on a mass balance).</li>
+  <br><li>During radiation experiments, take counts for 
+<b>background radiation</b> beforehand to correct the final results by excluding those counts.</li>
+  <br><li>Repeat the experiment with <b>different instruments</b> to check that they match (this is different to finding a mean).</li>
+</ul>  
+
+</p>
+
+<br>
+<h4>
+Parallax error
+</h4>
+
+
+<p>
+Where the reading is affected by the angle of which it is read,
+ parallax error can occur if the reading isn't read at eye level.
+<br><br>
+For example, when measuring the amount of a liquid using a measuring cylinder, you read from the bottom of the meniscus.
+If you are not at eye level with the meniscus, the reading is affected.
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+The meniscus refers to the curved upper surface of a liquid in a tube, although it has other meanings too!
+</p>
+<hr>
+</div>
+
+A parallax error could be an example of a random error due to the angle 
+at which the reading is taken from being inconsistent.
+<br><br>
+It could perhaps instead be a systematic error if the person 
+takes the reading at a consistently wrong (not eye level) angle as the results are off by the same amount.
+<br><br>
+What a wild child.
+</p>
+
+<br><br>
+<h3>
+Uncertainty
+</h3>
+
+<p>
+The uncertainty of a measurement is the boundary which we expect the true value to lie in.
+<br><br>
+ For example, if given a value of 30 &plusmn; 5 &deg;C, 
+we can expect the true value to be between 25 &deg;C and 35 &deg;C.
+<br><br>
+Uncertainty is rounded to the same level of refinement
+ as the measurement/reading (round to last s.f. of measurement/reading e.g. 9.5 &plusmn; 0.3 kg) - unless it's a fraction, of course.
+<br><br>
+There are different ways of expressing uncertainty:
+<br><br>
+<b>Absolute uncertainty</b>: &hairsp;&hairsp;&hairsp;&hairsp; &nbsp; &nbsp;
+ uncertainty given as a fixed quantity.
+<p class="eg"> &hairsp;&hairsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ e.g. 27.0<b> &plusmn; 0.9</b> A</p> 
+
+<b>Fractional uncertainty</b>: &hairsp;&nbsp;&nbsp;&nbsp;&nbsp;uncertainty given as a fraction of the
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ measurement/reading.
+<p class="eg"> &hairsp;&hairsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ e.g. 27.0<b> &plusmn; <sup>1</sup>&frasl;<sub>30</sub></b> A</p> 
+
+<b>Percentage uncertainty</b>:&nbsp;&nbsp; uncertainty given as a percentage of the
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ measurement/reading.
+<p class="eg"> &hairsp;&hairsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+ e.g. 27.0<b> &plusmn; 3.3 %</b> A</p> 
+
+
+You can reduce percentage and fractional uncertainty by taking 
+larger measurements/readings due to the absolute uncertainty remaining the same.
+
+</p>
+
+<h4>
+Calculating with uncertainty
+</h4>
+
+
+<p>
+If values are <b>added/subtracted</b>, we add the absolute uncertainties.
+<p class="eg">
+For example, (12.0 <b>&plusmn; 0.5</b>) - (3.9 <b>&plusmn; 0.8</b>) = (8.1 <b>&plusmn; 1.3</b>). 
+<br><br>
+If you think
+ about it, this makes sense, if two values have uncertainty, combining them creates a larger uncertainty. 
+<br><br>
+The lowest possible value would be when the values are
+ (12.0 - 0.5) - (3.9 + 0.8) = (8.1 - 0.8) or 11.5 - 4.7 = 7.3. 
+<br><br>
+The highest possible value would be 
+(12.0 + 0.5) - (3.9 - 0.8) = (8.1 + 0.8) or 12.5 - 3.1 = 8.9.
+<br><br>
+ The absolute uncertainties are added when 
+values are added or subtracted.
+</p>
+
+<br>
+If values are <b>multiplied/divided</b>, we add the percentage (or fractional) uncertainties.
+<p class="eg">
+For example, if we were to times the values from the previous example instead, we need to convert to percentage uncertainty:
+<br><br>
+(12.0 <b>&plusmn; 0.5</b>) &times; (3.9 <b>&plusmn; 0.8</b>) 
+= (12.0 <b>&plusmn; 4.2 %</b>) &times; (3.9 <b>&plusmn; 20.5 %</b>)
+
+<br><br>
+Then just perform the calculation and add the percentage uncertainties
+<br><br>
+&nbsp; &hairsp;&hairsp;&hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;
+= (12.0 &times; 3.9) <b>&plusmn; (4.2 + 20.5) %</b>
+<br>
+&nbsp; &hairsp;&hairsp;&hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&thinsp; &hairsp;&nbsp; &thinsp; &hairsp;
+= 46.8 <b>&plusmn; 24.7 %</b>
+
+<br><br>
+You can convert this back to absolute uncertainty if you'd like:
+<br><br>
+&nbsp; &hairsp;&hairsp;&hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&thinsp; &hairsp;&nbsp; &thinsp; &hairsp;
+= 46.8 <b>&plusmn; 11.6</b>
+</p>
+</p>
+
+
+
+
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+You may have to keep converting between absolute uncertainty and percentage uncertainty if 
+there's both addition/subtraction <b>and</b> multiplication/division involved in the equation.
+</p>
+<hr>
+</div>
+
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Extra note:  </b> 
+Thinking about adding the percentage uncertainties when 
+doing multiplication/division, there isn't a clear reason why this is the case.
+This is because rather than being the 'true range of uncertainty', doing this is more of an
+ approximation because it's very accurate most of the time and using the real value doesn't normally make much of
+ a difference. If you're interested in seeing why, I explain it 
+<a href="Uncertaintyapprox.htm">here. </a>
+
+
+</p>
+<hr>
+</div>
+
+
+
+
+
+
+
+
+<h4>
+Resolution and uncertainty
+</h4>
+
+<p>
+Refresh yourself on the difference between readings and measurements (for readings, you take one value; for measurements, you determine the difference between two readings).
+
+<br><br>
+The uncertainty in a <i>reading</i> is<b> &plusmn; half of the smallest division/interval</b>.
+<p class="eg">e.g. for a thermometer the smallest division is 1°C so the uncertainty is ±0.5°C. <p>
+
+
+ <img 
+    style="width:480px"
+    src="Resolutionthermometerreadinguncertainty.png" 
+    alt="Illustration of thermometer uncertainty calculation."
+    display="block"/>
+
+
+
+<br><br>
+The uncertainty in a <i>measurement</i> is<b> &plusmn; the smallest division/interval</b>.
+<p class="eg">e.g. for a ruler, you must account for both the start and end readings, the smallest division is 1 mm so the uncertainty of each of the readings
+ is 0.5 mm. this means the total absolute uncertainty of the measurement is 0.5 mm + 0.5 mm = 1 mm. <p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 40px; }
+-->
+</style>
+
+<br> <br> <br>
+<h5 style="
+  font-size:100%;
+  margin:15px 0px 15px 0px;
+  color:darkgreen;">
+Where would you like to go now?
+</h5>
+<a href="../MEASUREMENTS AND THEIR ERRORS MENU.htm" 
+   class="tab"> <b>To the measurements and their errors menu... </b> </a>
+<br><br>
+<a href="../../miniphysguide.htm"
+   class="tab"> <b>To Main Menu... </b> </a>
+
+
+
+
+<br><br><br><br><br>
+<footer>
+<hr style="width:480px">
+ <p> written by Shirley Xu, inspired by Jim Clark (creator of chemguide) </p>
+</footer>
+</body>
+</html>
+
+<!-- REFERENCES
+https://filestore.aqa.org.uk/resources/physics/specifications/AQA-7407-7408-SP-2015.PDF
+https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/AQA/01-Measurements-and-Errors/Detailed%20Notes%20-%20Section%2001%20Measurements%20and%20their%20Errors%20-%20AQA%20Physics%20A-level.pdf
+https://www.sixsigma-institute.org/Accuracy_Vs_Precision.php
+https://www.dnasoftware.com/our-products/copycount-qpcr-analysis-copynumber/precision-and-accuracy/
+https://www.physics.umd.edu/courses/Phys276/Hill/Information/Notes/ErrorAnalysis.html
+https://www.thoughtco.com/random-vs-systematic-error-4175358
+https://www.six-sigma-material.com/MSA.html
+https://www.labmate-online.com/news/news-and-views/5/breaking-news/what-is-the-difference-between-repeatability-and-reproducibility/30638
+https://en.wikipedia.org/wiki/Resolving_power
+https://www.gcse.com/science/resolution.htm
+https://www.spiedigitallibrary.org/ebooks/PM/Confocal-Microscopy-and-Multiphoton-Excitation-Microscopy--The-Genesis-of/4/Optical-Resolution-and-Resolving-Power--What-It-Is-How/10.1117/3.660403.ch4
+http://www.astronomyforum.net/astronomy-beginners-forum/82404-resolution-vs-resolving-power.html
+Special mention: Thomas Frith
+https://www.statisticshowto.com/systematic-error-random-error/
+https://www.youtube.com/watch?v=0yunyyZ_-8o
+https://www.lexico.com/en/definition/meniscus
+
+
+-->
