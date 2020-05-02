@@ -704,7 +704,7 @@ Calculating with uncertainty
 
 
 <p>
-If values are <b>added/subtracted</b>, we add the absolute uncertainties.
+If values are <b>added/subtracted</b>, we add the <b>absolute</b> uncertainties.
 <p class="eg">
 For example, (12.0 <b>&plusmn; 0.5</b>) - (3.9 <b>&plusmn; 0.8</b>) = (8.1 <b>&plusmn; 1.3</b>). 
 <br><br>
@@ -722,7 +722,7 @@ values are added or subtracted.
 </p>
 
 <br>
-If values are <b>multiplied/divided</b>, we add the percentage (or fractional) uncertainties.
+If values are <b>multiplied/divided</b>, we add the <b>percentage</b> (or fractional) uncertainties.
 <p class="eg">
 For example, if we were to times the values from the previous example instead, we need to convert to percentage uncertainty:
 <br><br>
@@ -744,6 +744,12 @@ You can convert this back to absolute uncertainty if you'd like:
 &nbsp; &hairsp;&hairsp;&hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&nbsp; &nbsp; &thinsp; &hairsp;&nbsp; &thinsp; &hairsp;&thinsp; &hairsp;&nbsp; &thinsp; &hairsp;
 = 46.8 <b>&plusmn; 11.6</b>
 </p>
+<br>
+<p>
+
+Remember that raising to a power is the same as timesing by itself that many times 
+(e.g. q<sup>3</sup> = q &times; q &times; q so if q had an uncertainty, the % uncertainty of 
+q<sup>3</sup> would be 3 times the % uncertainty of q using multiplication rules).
 </p>
 
 
@@ -809,10 +815,92 @@ The uncertainty in a <i>measurement</i> is<b> &plusmn; the smallest division/int
 <p class="eg">e.g. for a ruler, you must account for both the start and end readings, the smallest division is 1 mm so the uncertainty of each of the readings
  is 0.5 mm. this means the total absolute uncertainty of the measurement is 0.5 mm + 0.5 mm = 1 mm. <p>
 
+<br><br>
+ For <b>digital data</b>, the uncertainty of the instrument (and therefore the data taken from it) is assumed to be
+ <b>&plusmn; 1 of the smallest division/interval</b> (or the last significant digit 
+e.g. 2.76  &plusmn; 0.01 &ohm;) if the uncertainty isn't quoted already. 
+
+<br><br>
+This is the same for given values.
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Although for given values, usually they are averages of various measurements so in practice, the actual uncertainty would be much greater.
+</p>
+<hr>
+</div>
+
+
+<br><br>
+This means that the resolution of the instrument affects its uncertainty.
+
+<br><br><br>
+<b>Repeated data</b> has an absolute uncertainty that is half of the range (largest value - smallest value).
+ <br><br>This is written as <b>the mean &plusmn; <sup>range</sup> &frasl; <sub>2</sub></b>:
+<br><br>
+For example, here's how the data for how long it takes for people to run 100 m could be represented and organised:
+<br><br>
+<table>
+  <tr>
+    <th rowspan="2">Name</th>
+    <th colspan="6">Time taken (s)</th>
+  </tr>
+
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>mean</th>
+    <th>range</th>
+    <th>uncertainty</th>
+  </tr>
+
+  <tr>
+    <td>Bobby</td>
+    <td>13.6</td>
+    <td>13.1</td>
+    <td>13.2</td>
+    <td>13.3</td>
+    <td>0.5</td>
+    <td>&plusmn; 0.3</td>
+  </tr>
+
+  <tr>
+    <td>Marcus</td>
+    <td>13.8</td>
+    <td>13.8</td>
+    <td>13.8</td>
+    <td>13.8</td>
+    <td>0.0</td>
+    <td>&plusmn; 0.1</td>
+  </tr>
+
+  <tr>
+    <td>Tristan</td>
+    <td>12.4</td>
+    <td>12.6</td>
+    <td>11.7</td>
+    <td>12.2</td>
+    <td>0.9</td>
+    <td>&plusmn; 0.5</td>
+  </tr>
+
+</table>
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Remember that the uncertainty (and the mean) has to be to the same last significant figure as the
+ data. Also that the uncertainty has to be *at least* &plusmn; the last significant digit sue to the resolution of the instrument.
+</p>
+<hr>
+</div>
+
 
 </p>
-
-
+<h4>Reducing uncertainty</h4>
 
 
 
@@ -875,6 +963,7 @@ Special mention: Thomas Frith
 https://www.statisticshowto.com/systematic-error-random-error/
 https://www.youtube.com/watch?v=0yunyyZ_-8o
 https://www.lexico.com/en/definition/meniscus
+https://physics.stackexchange.com/questions/333521/uncertainty-in-a-given-value
 
 
 -->
