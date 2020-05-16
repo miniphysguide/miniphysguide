@@ -93,7 +93,7 @@ td{
 
 <body 
   style="
-    background-color:pink; 
+    background-color:#d7e4f5; 
     font-family:arial;
     width:480px;
     margin: auto;">
@@ -588,7 +588,7 @@ There are arguably infinite ways of reducing random errors, here's a few example
 <ul>
   <li>Take at least 3 <b> repeats</b> and calculate a <b>mean</b>, identifying and ignoring any anomalies.</li>
   <br><li>Reduce human error by using <b>computers</b>, <b>data loggers</b>, or<b> cameras</b> for measurements.</li>
-  <br><li>Control <b>environmental factor</b>s as best as you can (do the experiment in a short amount of time to reduce temperature variation, or close the windows to reduce change in air currents etc.)</li>
+  <br><li>Control <b>environmental factors</b> as best as you can (do the experiment in a short amount of time to reduce temperature variation, or close the windows to reduce change in air currents etc.)</li>
 </ul>  
 
 </p>
@@ -921,6 +921,7 @@ For example, you can see that 0.25 &plusmn; 0.01 g has a higher % uncertainty th
 
 
 <h4>Graph uncertainty </h4>
+<h5>Error bars</h5>
 
 <p>
 Uncertainties on graphs are shown as error bars. They visually represent the range quite well and look like this:
@@ -932,15 +933,95 @@ Uncertainties on graphs are shown as error bars. They visually represent the ran
     display="block"/>
 
 <br><br><br><br><br><br><br><br><br><br><br>
-A line of best fit should go through all error bars (excluding anomolous points).
+A line of best fit should go through all error bars (excluding anomolous points):
 <br><br>
+<img 
+    style="width:100%; float:left;"
+    src="Lineofbestfit.png" 
+    alt="Graph showing line of best fit."
+    display="block"/>
+<br><br><br><br><br><br><br><br><brbr><br><br><br><br><br><br><br>
+
+
+<h5>Uncertainty in the gradient</h5>
+
 The absolute uncertainty in the gradient can be found by drawing the
  steepest and shallowest 'lines of worst fit' (still going through <i>all</i> error bars)
  and finding the <b>difference between these two gradients</b>.
+<br><br>
+<img 
+    style="width:100%; float:left;"
+    src="Lines (1).png" 
+    alt="graph showing lines of worst fit."
+    display="block"/>
+
+<br><br><br><br><br><br><br><br><brbr><br><br><br><br><br><br><br>
+
+If the line of best fit had a gradient of -3.0 and the lines of worst fit had gradients -2.7 and -3.4, then you would write the final 
+gradient as -3.0 &plusmn; 0.7. 
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Just like with any other uncertainty, this can be converted to percentage uncertainty if you want.
 </p>
+<hr>
+</div>
+
+<br>
+This is just an example- since the graphs drawn have no scale on the axes, the gradients could be anything!
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Axes is the plural of axis and is pronounced "axe-ease".
+</p>
+<hr>
+</div>
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+You need to be confident with calculating gradients. 
+<br><br>
+The gradient gives a measure for how steep a slope is. 
+<br>It is calculated by doing <sup> change in y </sup> &frasl; <sub> change in x </sub> for a straight line graph.
+</p>
+<hr>
+</div>
 
 
 
+<h5>Uncertainty in the y-intercept</h5>
+
+If the two lines of worst fit give different y-intercepts, you can do the same kind of calculation as you did for the gradient to give an uncertainty for the y- intercept.
+<br><br>
+The absolute uncertainty will be the difference in the y-intercepts of the lines of worst fit.
+<br><br>
+If the y-intercept from the line of best fit was 7.9 and the y-intercepts of the lines of worst fit were 7.0 and 8.5, then
+ you can write the reading of the y-intercept as 7.9 &plusmn; 1.5.
+</p>
+<br><br>
+
+<h4> A final summary </h4>
+
+<p>
+<ul>
+  <li>We now know what some important words in scientific experimentation mean: accuracy (how close results are to the 'true value'),
+ precision (how close results are to each other),
+ repeatability (how precise different results are when the experiment is conducted again by the same person and setup),
+ reproducibility (how precise different results are when the experiment is reproduced by someone else with a different setup), 
+and resolution (the smallest change in quantity that you can measure with an instrument).</li>
+  <br><li>Random errors are ones that cause inconsistant changes. They affect precision and can be reduced by taking the mean of 3 repeat readings whilst ignoring anomalies. </li>
+  <br><li>Systematic errors are ones that cause a consistent changes. They affect accuracy and can be reduced by calibrating instruments with known values.</li>
+  <br><li>Uncertainty shows the range of possible values where the true value could lie.</li>
+  <br><li>Measurements are results that require taking a difference between two readings- this means that calculating the absolute uncertainty for a 
+measurement will be the same as adding the two involved reading uncertainties.</li>
+
+</ul>
+</p>
 
 
 
