@@ -1,0 +1,210 @@
+﻿<!-- 
+PAGE INCOMPLETE (pink); 
+PAGE COMPLETE BUT LINKS ARE NOT (#ffc054); 
+ALL COMPLETE (#d7e4f5) 
+
+NOTE:
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Here's a note.
+</p>
+<hr>
+</div>
+
+WARNING:
+
+<div class="warning">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Warning:  </b> 
+Here's a warning.
+</p>
+<hr>
+</div>
+
+&Therefore;
+&nbsp; &thinsp; &hairsp;
+
+ &plusmn; <sup>1</sup>&frasl;<sub>30</sub>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+h1
+{
+  background-color:#ECF3F3;
+  padding:5px 30px 5px 30px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  font-size:80%;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:480px
+}
+
+div.note {
+  font-size:80%;
+  color:green;
+  margin-left:105px;
+}
+
+div.warning {
+  font-size:80%;
+  color:red;
+  margin-left:105px;
+}
+
+.eg{
+  font-size:97%;
+  color:#4f4f4f;  
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 4px;
+  font-size:94%;
+}
+
+th{
+  background-color: #eec9ff;
+}
+
+td{
+  background-color: #f9edff;
+}
+
+</style>
+</head>
+
+<body 
+  style="
+    background-color:pink; 
+    font-family:arial;
+    width:480px;
+    margin: auto;">
+
+
+<head>
+<style>
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  margin: 10px;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ffc45e; 
+  color: #6e34ba;
+}
+</style>
+</head>
+
+
+
+
+<button 
+  class="button"
+  onclick="showImage()">
+Specification Reference
+</button>
+
+<div id="specImage" style="display:none">
+
+<img 
+  src="3.1.3 Estimation of physical quantities spec point.jpg" 
+  alt="3.1.3 Estimation of physical quantities spec point"
+  display="block"/>
+
+</div>
+
+<script>
+function showImage() {
+  var x = document.getElementById("specImage");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+<h2>
+ESTIMATION OF PHYSICAL QUANTITIES
+</h2>
+<br>
+
+<p>
+This page explains what is meant by the term 'orders of magnitude' and also explores the use of estimation.
+
+</p>
+<br>
+<h3>
+Orders of magnitude
+</h3>
+
+<h4>
+Precision vs accuracy
+</h4>
+
+
+
+
+<style type="text/css">
+<!--
+ .tab { margin-left: 40px; }
+-->
+</style>
+
+<br> <br> <br>
+<h5 style="
+  font-size:100%;
+  margin:15px 0px 15px 0px;
+  color:darkgreen;">
+Where would you like to go now?
+</h5>
+<a href="../MEASUREMENTS AND THEIR ERRORS MENU.htm" 
+   class="tab"> <b>To the measurements and their errors menu... </b> </a>
+<br><br>
+<a href="../../miniphysguide.htm"
+   class="tab"> <b>To Main Menu... </b> </a>
+
+
+
+
+<br><br><br><br><br>
+<footer>
+<hr style="width:480px">
+ <p> written by Shirley Xu, inspired by Jim Clark (creator of chemguide) </p>
+</footer>
+</body>
+</html>
+
+<!-- REFERENCES
+https://filestore.aqa.org.uk/resources/physics/specifications/AQA-7407-7408-SP-2015.PDF
+https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/AQA/01-Measurements-and-Errors/Detailed%20Notes%20-%20Section%2001%20Measurements%20and%20their%20Errors%20-%20AQA%20Physics%20A-level.pdf
+
+-->

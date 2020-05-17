@@ -3,15 +3,30 @@ PAGE INCOMPLETE (pink);
 PAGE COMPLETE BUT LINKS ARE NOT (#ffc054); 
 ALL COMPLETE (#d7e4f5) 
 
-footer {
- position: absolute;
- bottom: 0;
- width: 100%;
-}
-       border-top-height: 80px;
-       border-top-style: solid;
-       border-top-color: #FFF;
+NOTE:
 
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+Here's a note.
+</p>
+<hr>
+</div>
+
+WARNING:
+
+<div class="warning">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Warning:  </b> 
+Here's a warning.
+</p>
+<hr>
+</div>
+
+&Therefore;
+&nbsp; &thinsp; &hairsp;
+
+ &plusmn; <sup>1</sup>&frasl;<sub>30</sub>
 -->
 
 <!DOCTYPE html>
@@ -21,15 +36,56 @@ footer {
 <style>
 h1
 {
-    background-color:#ECF3F3;
-    padding:5px 30px 5px 30px;
+  background-color:#ECF3F3;
+  padding:5px 30px 5px 30px;
 }
 
 footer {
- position: relative;
- bottom: 0;
- font-size:80%;
+  position: relative;
+  bottom: 0;
+  font-size:80%;
 
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:480px
+}
+
+div.note {
+  font-size:80%;
+  color:green;
+  margin-left:105px;
+}
+
+div.warning {
+  font-size:80%;
+  color:red;
+  margin-left:105px;
+}
+
+.eg{
+  font-size:97%;
+  color:#4f4f4f;  
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 4px;
+  font-size:94%;
+}
+
+th{
+  background-color: #eec9ff;
+}
+
+td{
+  background-color: #f9edff;
 }
 
 </style>
@@ -37,26 +93,165 @@ footer {
 
 <body 
   style="
-    background-color:pink; 
+    background-color:#d7e4f5; 
     font-family:arial;
     width:480px;
     margin: auto;">
 
-<h1 
-  style="
-    font-size:205%;
-    text-align:center;
-    color:#3772bf;">
 
-Understanding Physics
+<head>
+<style>
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  margin: 10px;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 
-</h1>
+.button:hover {
+  background-color: #ffc45e; 
+  color: #6e34ba;
+}
+</style>
+</head>
 
-<br> 
+
+
+
+<button 
+  class="button"
+  onclick="showImage()">
+Specification Reference
+</button>
+
+<div id="specImage" style="display:none">
+
+<img 
+  src="3.1.3 Estimation of physical quantities spec point.jpg" 
+  alt="3.1.3 Estimation of physical quantities spec point"
+  display="block"/>
+
+</div>
+
+<script>
+function showImage() {
+  var x = document.getElementById("specImage");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
 <h2>
-WAVES MENU
+ESTIMATION OF PHYSICAL QUANTITIES
 </h2>
+<br>
+
+<p>
+This page explains what is meant by the term 'orders of magnitude' and also explores the use of estimation.
+
+</p>
+<br>
+<h3>
+Orders of magnitude
+</h3>
+
+<p>
+Orders of magnitude are used to describe how large a given quantity (or a change in quantity) is from an exponential point of view.
 <br><br>
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+An exponent is the term representing the power that something is raised to. e.g the exponent in 2<sup>3</sup> is 3.
+<br><br>
+This means that orders of magnitude are just ways of comparing or stating exponents.
+</p>
+<hr>
+</div>
+
+
+Typically, it is used to describe powers of ten,
+ which is very practical when working with numbers in standard form (which is usually the case in science!).
+
+<br><br>
+For example, you could say that the average diameter of a nucleus has an order of magnitude of around 
+10<sup>-14</sup> m,
+<br> <br>
+or that 10 000 m is two orders of magnitude greater than 100 m.
+
+<br><br>
+If you are asked to give a value to the nearest order of magnitude, calculate the value (if needed) and then round it to the nearest power of ten as the last step. 
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Note:  </b>
+
+Just like with any other rounding, you do it as the very last step.
+</p>
+<hr>
+</div>
+
+
+<div class="note">
+<hr style="width">
+<p style="margin:2px 0px 2px 0px"><b>Extra note:  </b>
+It's easy to forget how extremely large the differences are when working with exponentials (or just extremely large or small numbers in general). 
+An order of magnitude change is greatly impactful. 2 orders of magnitude less than the length of a metre ruler, you'll be working on the scale of the diameter of a coin. 2 orders of magnitude greater than the length of a metre ruler, you'll be working with football field length (about the same as the height of Big Ben!).
+</p>
+<hr>
+</div>
+
+
+
+
+</p>
+<br>
+<h3>
+Estimation
+</h3>
+
+<p>
+Estimation is a very useful skill which in general involves giving very educated guesses.
+
+<br><br>
+Physicists have to use this to approximate the values of physical quantities. This way, they can make comparisons or check that an answer is reasonable.
+<br><br>
+You can make estimates by just imagining if an answer is plausible or not (this only works if you can wrap your head around the sizes you're working with). For example, the length of an adult shoe from toe to heel is probably around 25 cm, you can at least say that it's definitely going to be between 5 cm and 60 cm.
+<br><br>
+The best way of making estimates when working with maths is to just round the values before doing your calculation because this will be quicker and will give a pretty good number that should be somewhere around the actual answer.
+<br><br>
+For example, you can (fairly) quickly give an estimate for any random calculation: 248968 &times; 81365 is approximately the same as 250000 &times; 
+80000 which is 25 &times; 4 &times; 2 &times; 10<sup>8</sup> 
+so the answer will be around 2 &times 10<sup>10</sup> 
+(200 &times 10<sup>8</sup>). If you end up with an answer with an order of magnitude of 8 or something far from 10, you will know that you've gone wrong. This estimate will also give you some idea of how large this value is so you can compare it to others to some degree.
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style type="text/css">
 <!--
@@ -64,21 +259,37 @@ WAVES MENU
 -->
 </style>
 
-
-<a href=".htm"> <b> Progressive and Stationary Waves... </b> </a>
-<p class="tab"> 
-Gives an overview of the types of waves 
-(longitudinal vs transverse, progressive vs stationary), and 
-discusses superposition and coherence.
-</p><br>
-
-
-<a href=".htm"> <b> SUBHEADING... </b> </a>
-<p class="tab"> 
-DESCRIPTION
-</p><br>
-
-
-
 <br> <br> <br>
-<a href="../miniphysguide.htm"> <b> Go to Main Menu... </b> </a>
+<h5 style="
+  font-size:100%;
+  margin:15px 0px 15px 0px;
+  color:darkgreen;">
+Where would you like to go now?
+</h5>
+<a href="../MEASUREMENTS AND THEIR ERRORS MENU.htm" 
+   class="tab"> <b>To the measurements and their errors menu... </b> </a>
+<br><br>
+<a href="../../miniphysguide.htm"
+   class="tab"> <b>To Main Menu... </b> </a>
+
+
+
+
+<br><br><br><br><br>
+<footer>
+<hr style="width:480px">
+ <p> written by Shirley Xu, inspired by Jim Clark (creator of chemguide) </p>
+</footer>
+</body>
+</html>
+
+<!-- REFERENCES
+https://filestore.aqa.org.uk/resources/physics/specifications/AQA-7407-7408-SP-2015.PDF
+https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/AQA/01-Measurements-and-Errors/Detailed%20Notes%20-%20Section%2001%20Measurements%20and%20their%20Errors%20-%20AQA%20Physics%20A-level.pdf
+https://whatis.techtarget.com/definition/order-of-magnitude
+http://www.bluebulbprojects.com/MeasureOfThings/results.php?comp=height&unit=m&amt=100&sort=pr&p=1
+
+
+
+
+-->
